@@ -8,7 +8,7 @@ library(ggrepel)
 library(recipes)
 
 # data preparation
-anime_raw <- read_csv("https://uwmadison.box.com/shared/static/hnvznr8i22jnzi8x70lsibkw6umkboaw.csv") |>
+anime_raw <- read_csv("data/anime_dataset.csv") |>
   separate_rows(Genres, sep = ",\\s*") |>
   mutate(
     Demographic = substr(Demographic, 0, str_length(Demographic) / 2),
